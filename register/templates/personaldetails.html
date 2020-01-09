@@ -1,0 +1,96 @@
+{% load static %}<!DOCTYPE html>
+<html>
+	<head>
+		<title>faculty</title>
+		<link rel="stylesheet" href="{% static 'css/style3.css' %}">
+	
+		<style>
+        table,th,td{border:2px solid black;border-collapse:collapse;}
+        </style>
+
+	</head>
+	<body class="b">
+	
+<!---------------------------------menubar-------------->
+
+		<div class="navbar">
+			<ul>
+				<li><a href="edit.html">Edit</a>
+				
+					<div class="submenu">
+						<ul>
+							<li><a href="{% url 'password'%}">Password</a></li>
+							<li><a href="{% url 'mobile'%}">Mobile</a></li>
+							<li><a href="{% url 'email'%}">Email</a></li>
+						
+						</ul>
+					</div>
+				</li>
+					<li><a href="{% url 'logout'%}%">Logout</a></li>
+			</ul>
+			
+		</div>		
+    	<div>
+			<div>
+				{%if authors%}
+				{%for i in authors%}
+				<h1>{{i.Name}}</h1>
+                
+    
+                <table>
+    
+                    <tr>
+                        
+                    </tr>
+                    <tr>
+                        <td>student id</td><td>{{i.stdid}}</td>
+                    </tr>
+                    <tr>
+                        <td>admissionno</td><td>{{i.admno}}</td>
+                    </tr>
+                    <tr>
+                        <td>name</td><td>{{i.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>address</td><td>{{i.address}}</td>
+                    </tr>
+                    <tr>
+                        <td>dob</td><td>{{i.dob}}</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>gender</td><td>{{i.gender}}</td>
+                    </tr>
+                    <tr>
+                        <td>mobile</td><td>{{i.mobile}}</td>
+                    </tr>
+                    <tr>
+                        <td>admissiondate</td><td>{{i.admdate}}</td>
+                    </tr>
+                    <tr>
+                        <td>guardian</td><td>{{i.guardian}}</td>
+                    </tr>
+                    <tr>
+                        <td>batch</td><td>{{i.batch}}</td>
+                    </tr>
+                    <tr>
+                        <td>email</td><td>{{i.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>password</td><td>{{i.password}}</td>
+                    </tr>
+                </table>
+    
+    
+    
+                {%endfor %}
+                {%endif %}
+            </div>
+            
+        
+        
+    	</div>
+    </body>
+</html>
+        
+

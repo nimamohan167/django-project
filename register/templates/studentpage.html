@@ -1,0 +1,57 @@
+{% load static %}<!DOCTYPE html>
+<html>
+	<head>
+		<title>student</title>
+		<link rel="stylesheet" href="{% static 'css/style3.css' %}">
+	
+		<style></style>
+
+	</head>
+	<body class="b">
+	
+<!---------------------------------menubar-------------->
+
+		<div class="navbar">
+			<ul>
+				<li><a href="edit.html">Edit</a>
+				
+					<div class="submenu">
+						<ul>
+							<li><a href="password.html">Password</a></li>
+							<li><a href="mobile.html">Mobile</a></li>
+							<li><a href="email.html">Email</a></li>
+						</ul>
+					</div>
+				</li>
+					<li><a href="{% url 'logout'%}">Logout</a></li>
+			</ul>
+			
+		</div		
+		<!-- menubar end -->
+		<!-- content start -->
+			
+
+		<div class="cont">
+			<form>
+			{% csrf_token%}
+			<h3><center><li><a>My Profile</a></li></center></h3>
+				<li><a href="{% url 'personaldetails'%}">Personal Details</a></li>
+				<li><a href="{% url 'viewmark'%}">Mark</a></li>
+				<li><a href="{% url 'viewattend'%}">Attendance</a></li>
+				<li><a href="{% url 'studapplyleave'%}">Apply Leave</a></li>
+				
+			</form>
+		</div>
+		
+		
+		<!-- content end -->
+		<!-- footer start -->
+		
+		<div class="ft">
+<footer>
+	<p>&copy 2018-2019 company inc.</p>
+</footer>
+		</div>
+		<!-- footer end -->
+</body>
+</html>

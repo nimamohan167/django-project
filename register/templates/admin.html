@@ -1,0 +1,44 @@
+{% load static %}<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="{% static 'css/style4.css' %}">
+</head>
+<body class="b">
+<div class="menubar">
+<ul>
+<li><a href="{% url 'admin'%}">Admin page</a></li>
+<li><a href="{% url 'logout'%}">Logout</a></li>
+</ul>
+</div>
+<form >
+<div class="cont">
+<form>
+
+<h3>Add faculty:</h3>
+<form>
+<center ><button formaction="{% url 'addfaculty'%}" class="frm-btn">Add Faculty</center>
+</form>
+<form action="{% url 'viewfac'%}" method="POST">
+{% csrf_token %}
+<h3>View faculty:<h3>
+<center><input type="submit" class="frm-btn" name="View faculty" value="view faculty"></center>
+</form>
+<form action="{% url 'viewstd'%}" method="POST">
+{% csrf_token %}
+<h3>View student:</h3>
+<center><input type="submit" class="frm-btn"name="view faculty"value="view student">
+</form>
+<form action="{% url 'viewstd'%}" method="POST">
+{% csrf_token %}
+<h3>View Faculty Attendence:</h3>
+<center><input type="submit" class="frm-btn"name="view faculty "value="view faculty">
+</form>
+
+
+</form>
+</div>
+</body>
+</html>
+
+
